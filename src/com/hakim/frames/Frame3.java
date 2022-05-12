@@ -1,4 +1,4 @@
-package com.hakim;
+package com.hakim.frames;
 
 import javax.swing.JFrame;
 

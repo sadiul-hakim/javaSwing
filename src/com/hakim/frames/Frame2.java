@@ -1,4 +1,4 @@
-package com.hakim;
+package com.hakim.frames;
 
 import javax.swing.*;
 import java.awt.Container;
@@ -29,14 +29,17 @@ public class Frame2 extends JFrame {
         userLabel.setForeground(Color.blue);
         userLabel.setOpaque(true);
         userLabel.setBackground(Color.WHITE);
+        userLabel.setToolTipText("user name");
         c.add(userLabel);
 
         passLabel=new JLabel("Enter your password : ");
         passLabel.setBounds(10,40,150,30);
         passLabel.setForeground(Color.blue);
         passLabel.setOpaque(true);
+        passLabel.setToolTipText("password");
         passLabel.setBackground(Color.WHITE);
         c.add(passLabel);
+
     }
 
     private void setIcon(){
