@@ -7,11 +7,18 @@ import java.awt.event.ActionListener;
 
 public class TextActionListener extends JFrame {
     private ImageIcon frameIcon;
+    private ImageIcon deleteButtonIcon;
+    private ImageIcon submitButtonIcon;
     private Container c;
     private JTextField nameField;
     private JTextField emailField;
     private JPasswordField passwordField;
     private Font passwordFont;
+    private Font buttonFont;
+    private JButton submitButton;
+    private JButton clearButton;
+    private Cursor cursor;
+
     TextActionListener(){
         customizeFrame();
         initContainer();
@@ -29,26 +36,50 @@ public class TextActionListener extends JFrame {
         c.setLayout(null);
         c.setBackground(Color.gray);
         passwordFont=new Font("Arial",Font.PLAIN,18);
+        buttonFont=new Font("Arial",Font.PLAIN,16);
+        cursor=new Cursor(Cursor.HAND_CURSOR);
+        deleteButtonIcon=new ImageIcon("D:\\java_code\\javaSwingAgain\\src\\com\\hakim\\images\\Windows-Close-Program-icon.png");
+        submitButtonIcon=new ImageIcon("D:\\java_code\\javaSwingAgain\\src\\com\\hakim\\images\\email-send-icon.png");
 
         nameField=new JTextField();
         emailField=new JTextField();
         passwordField=new JPasswordField();
+        submitButton=new JButton();
+        clearButton=new JButton();
 
         nameField.setBounds(20,20,400,30);
         emailField.setBounds(20,60,400,30);
         passwordField.setBounds(20,100,400,30);
+        submitButton.setBounds(20,140,150,30);
+        clearButton.setBounds(160,140,150,30);
+
+        submitButton.setText("Submit");
+        clearButton.setText("Clear");
+
+//        submitButton.setBackground(Color.GREEN);
+//        submitButton.setForeground(Color.WHITE);
+        submitButton.setCursor(cursor);
+        submitButton.setIcon(submitButtonIcon);
+
+//        clearButton.setBackground(Color.RED);
+//        clearButton.setForeground(Color.WHITE);
+        clearButton.setCursor(cursor);
+        clearButton.setIcon(deleteButtonIcon);
+
+        submitButton.setFont(buttonFont);
+        clearButton.setFont(buttonFont);
 
         nameField.setBackground(Color.WHITE);
         nameField.setForeground(Color.BLACK);
-        nameField.setHorizontalAlignment(JTextField.CENTER);
+        nameField.setHorizontalAlignment(JTextField.LEFT);
 
         emailField.setBackground(Color.WHITE);
         emailField.setForeground(Color.BLACK);
-        emailField.setHorizontalAlignment(JTextField.CENTER);
+        emailField.setHorizontalAlignment(JTextField.LEFT);
 
         passwordField.setBackground(Color.WHITE);
         passwordField.setForeground(Color.BLACK);
-        passwordField.setHorizontalAlignment(JTextField.CENTER);
+        passwordField.setHorizontalAlignment(JTextField.LEFT);
 
         Handler handler=new Handler();
 
@@ -61,10 +92,11 @@ public class TextActionListener extends JFrame {
         passwordField.setBackground(Color.WHITE);
         passwordField.setForeground(Color.BLACK);
 
-
         c.add(nameField);
         c.add(emailField);
         c.add(passwordField);
+        c.add(submitButton);
+        c.add(clearButton);
     }
 
     class Handler implements ActionListener{
