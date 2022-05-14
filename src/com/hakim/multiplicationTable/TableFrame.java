@@ -121,10 +121,6 @@ public class TableFrame extends JFrame {
 
 
     public static void main(String[] args) {
-        customizeFrame();
-    }
-
-    private static void customizeFrame(){
         TableFrame frame=new TableFrame();
         frameIcon=new ImageIcon("D:\\java_code\\javaSwingAgain\\src\\com\\hakim\\multiplicationTable\\Dictionary-icon.png");
         frame.setVisible(true);
@@ -132,4 +128,5 @@ public class TableFrame extends JFrame {
         frame.setBounds(400,50,350,700);
         frame.setIconImage(frameIcon.getImage());
     }
+
 }

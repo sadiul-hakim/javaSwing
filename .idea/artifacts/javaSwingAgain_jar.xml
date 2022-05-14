@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="javaSwingAgain:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/javaSwingAgain_jar</output-path>
+    <root id="archive" name="javaSwingAgain.jar">
+      <element id="module-output" name="javaSwingAgain" />
+    </root>
+  </artifact>
+</component>
